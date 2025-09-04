@@ -1,0 +1,11 @@
+Problem Statement : Library Management System
+
+You need to design a schema diagram with the following requirements:
+
+The system has Users → two types: Librarian and Member (inheritance).
+
+A Member can borrow multiple Books, but each Book can be borrowed by only one Member at a time (one-to-many).
+
+Each Book belongs to one Category, but a Category can have many Books (many-to-one).
+
+Every Member has one Library Card (one-to-one).

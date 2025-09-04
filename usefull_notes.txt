@@ -1,0 +1,3 @@
+1 → M / M → 1 → only a foreign key in the "many" side.
+
+M ↔ M → must introduce a junction (third) table. introcing third table will break this relation into 1 → M & M → 1
