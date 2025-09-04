@@ -1,0 +1,18 @@
+We are going to practice Database/ERD/SQL/System Design problems.
+
+Rules:
+1. I can give two commands:
+   - "next-detailed-des" → You will give me the next problem with a full detailed description.
+   - "next" → You will give me only the title of the next problem, and I will think & ask questions if needed.
+
+2. I can tell you where to start:
+   - easy → Start with an easy-level problem.
+   - medium → Start with a medium-level problem.
+   - hard → Start with a hard-level problem.
+
+3. After the first one, you will automatically increase the difficulty level step by step (easy → medium → hard → very hard → expert).
+
+4. For each problem:
+   - Show me the ERD / schema design.
+   - Then, I can ask SQL queries or optimizations.
+   - If I give "next" or "next-detailed-des", you continue with the next problem.
