@@ -1,0 +1,13 @@
+Problem Statement : Hospital Management System
+
+You need to design a schema diagram for a hospital with the following requirements:
+
+The system has Users → two types: Doctor and Patient (inheritance).
+
+A Doctor can have many Appointments, and each appointment is with one Patient (one-to-many + many-to-one).
+
+A Patient can be admitted to a Ward. A Ward can have many Patients, but each Patient can only be admitted to one Ward at a time (one-to-many).
+
+Each Appointment can generate one Prescription, but a Prescription must belong to exactly one Appointment (one-to-one).
+
+A Medicine can appear in many Prescriptions, and each Prescription can include many Medicines (many-to-many).
