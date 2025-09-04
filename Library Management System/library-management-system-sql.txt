@@ -1,0 +1,52 @@
+-- Base User table
+CREATE TABLE User (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL
+);
+
+-- Librarian inherits from User
+CREATE TABLE Librarian (
+    librarian_id INT PRIMARY KEY,
+    FOREIGN KEY (librarian_id) REFERENCES User(id)
+);
+
+-- Member inherits from User
+CREATE TABLE Member (
+    member_id INT PRIMARY KEY,
+    card_id INT UNIQUE,
+    FOREIGN KEY (member_id) REFERENCES User(id)
+);
+
+-- Library Card (One-to-One with Member)
+CREATE TABLE LibraryCard (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    barcode_no VARCHAR(50) UNIQUE NOT NULL,
+    member_id INT UNIQUE,
+    FOREIGN KEY (member_id) REFERENCES Member(member_id)
+);
+
+-- Category table
+CREATE TABLE Category (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL
+);
+
+-- Book table (Many-to-One with Category)
+CREATE TABLE Book (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(200) NOT NULL,
+    category_id INT,
+    FOREIGN KEY (category_id) REFERENCES Category(id)
+);
+
+-- Borrow table (Many-to-Many between Member and Book)
+CREATE TABLE Borrow (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    member_id INT,
+    book_id INT,
+    borrow_date DATE NOT NULL,
+    return_date DATE,
+    status VARCHAR(50),
+    FOREIGN KEY (member_id) REFERENCES Member(member_id),
+    FOREIGN KEY (book_id) REFERENCES Book(id)
+);
