@@ -1,3 +1,9 @@
+1 ↔ 1 → foreign key in the dependent/optional table + UNIQUE constraint.
+
 1 → M / M → 1 → only a foreign key in the "many" side.
 
-M ↔ M → must introduce a junction (third) table. introcing third table will break this relation into 1 → M & M → 1
+M ↔ M → must introduce a junction (third) table; introducing third table breaks this relation into 1 → M & M → 1.
+
+One-to-One FK placement → put the foreign key in the dependent/optional table (the one that extends or relies on the other).
+
+One-to-One vs One-to-Many → both use a foreign key, but One-to-One adds a UNIQUE constraint on the FK.
